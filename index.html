@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: #f0f4f8;
+    background: linear-gradient(135deg, #89CFF0, #6A8DFF); /* soft blue gradient */
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,7 +19,7 @@
   .slideshow {
     width: 80%;
     max-width: 600px;
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -27,24 +27,32 @@
 
   h1 {
     text-align: center;
+    color: #304674; /* darker blue */
   }
 
   .slide {
     display: none;
     font-size: 1.2rem;
     line-height: 1.5;
+    background: #f2f6ff; /* light blue background */
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #6A8DFF; /* blue accent bar */
   }
 
+  /* Radio buttons hidden */
   input[type="radio"] {
     display: none;
   }
 
+  /* Show selected slide */
   #page1:checked ~ .content #slide1,
   #page2:checked ~ .content #slide2,
   #page3:checked ~ .content #slide3{
     display: block;
   }
 
+  /* Buttons */
   .page-buttons {
     text-align: center;
     margin-top: 20px;
@@ -52,16 +60,18 @@
 
   .page-buttons label {
     display: inline-block;
-    background: #d0d7e2;
+    background: #6A8DFF; /* bright blue buttons */
+    color: white;
     padding: 10px 15px;
     margin: 0 5px;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
+    font-weight: bold;
   }
 
   .page-buttons label:hover {
-    background: #b9c2ce;
+    background: #506BD8; /* darker on hover */
   }
 </style>
 </head>
@@ -78,17 +88,17 @@
   <div class="content">
     <!-- Slide 1 -->
     <div class="slide" id="slide1">
-      <p><strong>Me at eleven:</strong> I like playing football alot, I also love going hiking with my family, I usually bicycle to school, thats pretty fun for me :), and being outside with my friends alot is my FAVOURTIE thing.</p>
+      <p><strong>Me at eleven:</strong> I like playing football a lot, I also love going hiking with my family. I usually bicycle to school — that's pretty fun for me :) And being outside with my friends is my FAVOURITE thing.</p>
     </div>
 
     <!-- Slide 2 -->
     <div class="slide" id="slide2">
-      <p><strong>Kari at eleven:</strong> Kari liked playing football too. (Atleast I think) and she loveeeed ghiking too.  </p>
+      <p><strong>Kari at eleven:</strong> Kari liked playing football too (at least I think), and she loooved hiking as well.</p>
     </div>
 
     <!-- Slide 3 -->
     <div class="slide" id="slide3">
-      <p><strong>Comparison:</strong> We both liked football and hiking. I also liked bicycling and being outside a lot with my friends, and so did she probably. while Kari liked watching movies, and I didn't.</p>
+      <p><strong>Comparison:</strong> We both liked football and hiking. I also liked bicycling and being outside a lot with my friends, and she probably did too. Kari liked watching movies, and I didn't.</p>
     </div>
   </div>
 
